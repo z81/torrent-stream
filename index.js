@@ -592,9 +592,6 @@ var torrentStream = function (link, opts, cb) {
 
     mkdirp(path.dirname(torrentPath), function (err) {
       if (err) return engine.emit('error', err)
-      fs.writeFile(torrentPath, buf, function (err) {
-        if (err) engine.emit('error', err)
-      })
     })
   })
 
